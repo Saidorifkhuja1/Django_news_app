@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title%}Add News {% endblock %}
+
+
+{% block content%}
+<div class="features">
+  <h1>Add News</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.anons }}<br>
+    {{ form.body }}<br>
+    {{ form.data }}<br>
+    <span>{{ error }}</span>
+    <button class="btn btn-success" type="submit">Add News</button>
+  </form>
+</div>
+
+{% endblock %}
